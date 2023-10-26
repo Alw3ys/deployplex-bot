@@ -1,14 +1,17 @@
 [tool.poetry]
-name = "helloworld"
+name = "deployplex-bot"
 version = "0.1.0"
-description = "Hello World FastAPI example"
-authors = ["DeployPlex Team <hi@deployplex.com>"]
+description = "DeployPlex X Bot"
+authors = ["Alvaro Molina <am@deployplex.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
-fastapi = "^0.100.1"
+fastapi = "^0.104.0"
 uvicorn = {extras = ["standard"], version = "^0.23.2"}
+tweepy = "^4.14.0"
+python-dotenv = "^1.0.0"
+openai = "^0.28.1"
 
 
 [build-system]
