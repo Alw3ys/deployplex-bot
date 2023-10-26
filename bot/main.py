@@ -6,7 +6,7 @@ config = Config()
 app = FastAPI()
 
 
-@app.get("/")
+@app.post("/")
 def read_root() -> Response:
     response_result = openai.ChatCompletion.create(
         model="gpt-4",
