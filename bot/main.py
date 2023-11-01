@@ -1,7 +1,7 @@
 import openai
 from fastapi import FastAPI, Response, Depends
 from bot.config import Config
-from bot.cron_auth import authenticate_request
+from deployplex.integrations.fastapi import cron_job_auth
 
 config = Config()
 app = FastAPI()
@@ -20,5 +20,5 @@ def read_root() -> Response:
 
 
 @app.post("/auth")
-def read_root(auth: None = Depends(authenticate_request)) -> Response:
+def read_root(auth: None = Depends(cron_job_auth)) -> Response:
     return Response()
