@@ -9,7 +9,7 @@ dosei = Dosei()
 
 
 @app.post("/")
-def read_root() -> Response:
+def post_root() -> Response:
     return Response()
 
 
