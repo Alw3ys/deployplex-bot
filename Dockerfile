@@ -3,6 +3,6 @@ FROM doseiai/python:3.11
 COPY poetry.lock /usr/src/app
 COPY pyproject.toml /usr/src/app
 
-RUN poetry install --only main --no-root
+RUN poetry install --only main
 
 COPY . /usr/src/app

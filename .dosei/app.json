@@ -1,0 +1,9 @@
+{
+  "cron_jobs": [
+    {
+      "schedule": "0 9,13,17 * * *",
+      "entrypoint": "bot.main:tweet",
+      "is_async": false
+    }
+  ]
+}
