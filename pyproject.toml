@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "deployplex-bot"
+name = "bot"
 version = "0.1.0"
 description = "DeployPlex X Bot"
 authors = ["Alvaro Molina <am@deployplex.com>"]
