@@ -1,14 +1,20 @@
 import openai
-from fastapi import FastAPI, Response, Depends
+from dosei import Dosei
+from fastapi import FastAPI, Response
 from bot.config import Config
-from deployplex.integrations.fastapi import cron_job_auth
 
 config = Config()
 app = FastAPI()
+dosei = Dosei()
 
 
 @app.post("/")
 def read_root() -> Response:
+    return Response()
+
+
+@dosei.cron_job("0 9,13,17 * * *")
+def tweet():
     response_result = openai.ChatCompletion.create(
         model="gpt-4",
         messages=[{"role": "system", "content": config.prompt}],
@@ -16,9 +22,3 @@ def read_root() -> Response:
     config.tweepy_client.create_tweet(
         text=response_result.choices[0].message["content"]
     )
-    return Response()
-
-
-@app.post("/auth")
-def read_root(auth: None = Depends(cron_job_auth)) -> Response:
-    return Response()
