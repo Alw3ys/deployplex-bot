@@ -412,13 +412,13 @@ fastapi = ">=0.104.1,<0.105.0"
 
 [[package]]
 name = "dosei"
-version = "0.0.14"
+version = "0.0.16"
 description = "Dosei Python SDK"
 optional = false
 python-versions = ">=3.11,<4.0"
 files = [
-    {file = "dosei-0.0.14-py3-none-any.whl", hash = "sha256:eb0f2730642c9e781fc4355302872d71555e72f50d4be70415775b40136ffb74"},
-    {file = "dosei-0.0.14.tar.gz", hash = "sha256:8e6831efbaec74e9f13208430a03b805cef9e746c59a394ede1fb73ff302f24b"},
+    {file = "dosei-0.0.16-py3-none-any.whl", hash = "sha256:711645772aed2119583e0865896d0691df29044d59a13bc38d4431c7f7fb6ecc"},
+    {file = "dosei-0.0.16.tar.gz", hash = "sha256:2a7e97985ca1bec27bc30ad860bd1c53db25aff494d0aef057d25a689de96229"},
 ]
 
 [package.dependencies]
@@ -1547,4 +1547,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "1519edc42d5b102151385e3f34ea9e3ba79e625fb5e60e30ed15b19119e53cf1"
+content-hash = "643d0e0bf34dbe1f13d913de8dbd9675274ed8884c9587621435ec975028d302"

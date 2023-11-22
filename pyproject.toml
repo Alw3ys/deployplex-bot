@@ -13,7 +13,7 @@ tweepy = "^4.14.0"
 python-dotenv = "^1.0.0"
 openai = "^0.28.1"
 deployplex = "^0.0.10"
-dosei = "0.0.14"
+dosei = "0.0.16"
 
 
 [build-system]
