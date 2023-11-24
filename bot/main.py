@@ -8,13 +8,7 @@ app = FastAPI()
 dosei = Dosei()
 
 
-@app.post("/")
-def post_root() -> Response:
-    return Response()
-
-
-@dosei.cron_job("0 9,13,17 * * *")
-def tweet():
+def write_a_joke():
     response_result = openai.ChatCompletion.create(
         model="gpt-4",
         messages=[{"role": "system", "content": config.prompt}],
@@ -22,3 +16,14 @@ def tweet():
     config.tweepy_client.create_tweet(
         text=response_result.choices[0].message["content"]
     )
+
+
+@app.post("/")
+def post_a_joke() -> Response:
+    write_a_joke()
+    return Response()
+
+
+@dosei.cron_job("0 9,13,17 * * *")
+def tweet():
+    write_a_joke()
