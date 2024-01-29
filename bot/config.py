@@ -8,7 +8,6 @@ from dotenv import load_dotenv
 class Config:
     _self = None
     _initialized = False
-
     prompt = """
     You are an AI bot for X (previously Twitter), operated by Dosei.
     About Dosei: It's the go-to FastAPI platform, providing vector db hosting, monitoring, and more.
