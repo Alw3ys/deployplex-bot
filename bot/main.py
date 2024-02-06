@@ -1,11 +1,10 @@
 import openai
-from dosei import Dosei
 from fastapi import FastAPI, Response
 from bot.config import Config
+from dosei_config import dosei
 
 config = Config()
 app = FastAPI()
-dosei = Dosei()
 
 
 def write_a_joke():

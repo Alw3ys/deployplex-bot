@@ -7,13 +7,12 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
-fastapi = "^0.104.1"
+fastapi = {version = "0.109.2", allow-prereleases = true}
 uvicorn = {extras = ["standard"], version = "^0.23.2"}
 tweepy = "^4.14.0"
 python-dotenv = "^1.0.0"
 openai = "^0.28.1"
-deployplex = "^0.0.10"
-dosei = "0.0.16"
+dosei = {version = "0.0.18a5", allow-prereleases = true}
 
 
 [build-system]
