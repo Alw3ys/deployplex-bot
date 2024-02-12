@@ -1,7 +1,7 @@
 import openai
 from fastapi import FastAPI, Response
 from bot.config import Config
-from dosei_config import dosei
+from dosei import dosei
 
 config = Config()
 app = FastAPI()

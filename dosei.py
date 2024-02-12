@@ -1,4 +1,4 @@
-from dosei import Dosei
+from dosei_sdk import Dosei
 
 port = 8080
 dosei = Dosei(
